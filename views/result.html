@@ -1,0 +1,61 @@
+{{define "title"}}{{.Title}}{{end}}
+{{define "content"}}
+<div class="container pb-5">
+    <div class="row sticky-top-action-bar">
+        <div class="col-12">            
+        </div>
+    </div>    
+    <div class="row">        
+        <div class="col-12 py-2">                    
+            <div class="container-fluid">                
+                <div class="alert alert-success" role="alert">
+                    Success! Posted a journal entry with Google's reCAPTCHA with Golang</h1>
+                </div>                    
+                <div class="row">
+                    <div class="col-12">
+                        <label>{{.postTitle}}</label>                            
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <pre>{{.postPayload}}</pre>
+                    </div>
+                </div>                    
+            </div>            
+        </div>        
+    </div>    
+</div>
+{{end}}
+{{define "scripts"}}
+<script type="text/javascript">
+    var sharedEvents = new Vue();
+    var app = new Vue({
+        el: "#root",
+        data: {
+            o: [],            
+        },
+        computed: {            
+        },
+        methods:
+        {            
+        },
+        beforeMount() {            
+            /*var tmp = ;
+            if (tmp !== null) {
+                try {                            
+                    //this.o = JSON.parse(tmp);
+                    this.o = tmp;
+                }
+                catch (err) {
+                }
+            }*/
+        },
+        mounted() {                        
+            //this.axiosConfig.headers = {};
+            //this.axiosConfig.headers[document.querySelector('meta[name="_csrf_header"]').content] = document.querySelector('meta[name="_csrf"]').content;
+            //this.setupControls();
+            //this.loadForm(this.o);
+        }
+    });
+</script>
+{{end}}

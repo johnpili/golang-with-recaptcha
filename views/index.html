@@ -1,0 +1,73 @@
+{{define "title"}}{{.Title}}{{end}}
+{{define "content"}}
+<div class="container pb-5">
+    <div class="row sticky-top-action-bar">
+        <div class="col-12">            
+        </div>
+    </div>    
+    <div class="row">        
+        <div class="col-12 py-2">
+            <form method="POST" action="/">
+                <h1>Demo Google reCAPTCHA with Golang</h1>
+                <div class="container-fluid">
+                    {{if .hasError}} 
+                    <div class="alert alert-danger" role="alert">
+                        {{.errorMessage}}
+                    </div>
+                    {{end}}
+                    <div class="row">
+                        <div class="col-12 form-group">
+                            <label>Title</label>
+                            <input name="title" type="text" placeholder="Title" class="form-control" maxlength="100" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 form-group">                            
+                            <textarea name="payload" class="form-control" rows="10" placeholder="Journal Entries Here" maxlength="500"></textarea>
+                        </div>
+                    </div>
+                    <div> 
+                        <input type="hidden" name="gorilla.csrf.Token" value="{{.csrfToken}}"/>
+                        <div class="g-recaptcha" data-sitekey="{{.clientKey}}"></div>
+                        <br/>                   
+                        <button type="submit" class="btn btn-primary">Create</button>                        
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </div>    
+</div>
+{{end}}
+{{define "scripts"}}
+<script type="text/javascript">
+    var sharedEvents = new Vue();
+    var app = new Vue({
+        el: "#root",
+        data: {
+            o: [],            
+        },
+        computed: {            
+        },
+        methods:
+        {            
+        },
+        beforeMount() {            
+            /*var tmp = ;
+            if (tmp !== null) {
+                try {                            
+                    //this.o = JSON.parse(tmp);
+                    this.o = tmp;
+                }
+                catch (err) {
+                }
+            }*/
+        },
+        mounted() {                        
+            //this.axiosConfig.headers = {};
+            //this.axiosConfig.headers[document.querySelector('meta[name="_csrf_header"]').content] = document.querySelector('meta[name="_csrf"]').content;
+            //this.setupControls();
+            //this.loadForm(this.o);
+        }
+    });
+</script>
+{{end}}

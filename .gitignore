@@ -1,0 +1,32 @@
+# Project
+.project
+.settings
+.vscode
+.history
+
+# Executable
+using-recaptcha-with-golang
+using-recaptcha-with-golang.exe
+
+# mac crap
+.DS_Store
+
+# livereload helper
+gin-bin
+
+# Logs
+logs
+
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# SSL/TLS
+server.crt
+server.key
+
+# JSON Files
+music.json
