@@ -53,7 +53,7 @@ func main() {
 	}
 
 	var configLocation string
-	flag.StringVar(&configLocation, "config", ".config.yml", "Set the location of the configuration file")
+	flag.StringVar(&configLocation, "config", "config.yml", "Set the location of the configuration file")
 	flag.Parse()
 	loadConfiguration(configLocation, &configuration) // Load the configuration for yaml file
 
