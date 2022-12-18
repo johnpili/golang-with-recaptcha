@@ -130,7 +130,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 // This will handle the reCAPTCHA verification between your server to Google's server
 func validateReCAPTCHA(recaptchaResponse string) (bool, error) {
-
 	// Check this URL verification details from Google
 	// https://developers.google.com/recaptcha/docs/verify
 	req, err := http.PostForm(configuration.ReCAPTCHA.VerifyURL, url.Values{
