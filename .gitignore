@@ -6,8 +6,8 @@
 .history
 
 # Executable
-using-recaptcha-with-golang
-using-recaptcha-with-golang.exe
+golang-with-recaptcha
+golang-with-recaptcha.exe
 
 # mac crap
 .DS_Store
@@ -28,6 +28,3 @@ pids
 # SSL/TLS
 server.crt
 server.key
-
-# JSON Files
-music.json

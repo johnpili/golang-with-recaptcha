@@ -1,9 +1,8 @@
-http:    
+http:
+    base_path: ""
     port: 8080
     server_crt: "server.crt"
     server_key: "server.key"
-    csrf_key: "PUT 32 BYTES OF KEY HERE"
-    csrf_secure: false
 recaptcha:
     verify_url: "https://www.google.com/recaptcha/api/siteverify"
     client_key: ""
